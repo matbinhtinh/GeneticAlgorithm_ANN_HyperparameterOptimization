@@ -1,4 +1,4 @@
-"""Class that represents the network to be evolved."""
+
 import random
 import logging
 from train import train_and_score
@@ -23,8 +23,7 @@ class Network():
         self.nn_param_choices = nn_param_choices
         self.network = {}
 
-    def create_random(self):
-        """Create a random network."""
+
 
 
     def create_set(self, network):
