@@ -1,4 +1,3 @@
-"""Iterate over every combination of hyperparameters."""
 import logging
 from network import Network
 from tqdm import tqdm

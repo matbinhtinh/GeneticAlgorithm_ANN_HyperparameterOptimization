@@ -55,11 +55,7 @@ def generate(population,generations,nn_param_choices):
 
         if generation != generations:
             pop = optimizer.evolve(pop)
-    # Sort our final population.
-    networks = sorted(networks, key=lambda x: x.accuracy, reverse=True)
 
-    # Print out the top 5 networks.
-    print_networks(networks[:5])
 
 def main():
     population = 20
