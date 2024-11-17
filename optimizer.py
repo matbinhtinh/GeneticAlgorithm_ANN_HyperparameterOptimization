@@ -23,7 +23,7 @@ class Optimizer():
         
         return population
     
-    def fitness(network):
+    def fitness(self,network):
         return network.accuracy
     
     def mutate(self, network):
@@ -34,7 +34,7 @@ class Optimizer():
         return network
 
     def breed(self, Dad, Mom):
-        child = []
+        babies = []
 
         for _ in range(2):
             child = {}
@@ -48,9 +48,9 @@ class Optimizer():
             if network.network in self.visited_solutions:
                 self.mutate(network)
             self.visited_solutions.append(network.network)
-            child.append(network)
+            babies.append(network)
             
-        return child
+        return babies
     
     def evolve(self,pop):
         graded = [(self.fitness(network),network) for network in pop]
